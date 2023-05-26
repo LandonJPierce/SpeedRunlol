@@ -12,9 +12,9 @@ namespace SpeedRun.Controllers
     {
         private DataModel DM = new DataModel();
 
-        public IQueryable<NewForm> Get()
+        public IQueryable<NewFormTable> Get()
         {
-            return DM.NewForms;
+            return DM.NewFormTables;
         }
     }
 }

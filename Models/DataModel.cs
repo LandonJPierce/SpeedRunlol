@@ -12,15 +12,15 @@ namespace SpeedRun.Models
         {
         }
 
-        public virtual DbSet<NewForm> NewForms { get; set; }
+        public virtual DbSet<NewFormTable> NewFormTables { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<NewForm>()
+            modelBuilder.Entity<NewFormTable>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<NewForm>()
+            modelBuilder.Entity<NewFormTable>()
                 .Property(e => e.DateHired)
                 .IsUnicode(false);
         }

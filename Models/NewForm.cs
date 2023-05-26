@@ -7,7 +7,7 @@ namespace SpeedRun.Models
     using System.Data.Entity.Spatial;
 
     [Table("NewForm")]
-    public partial class NewForm
+    public partial class NewFormTable
     {
         [Key]
         public int Id { get; set; }
