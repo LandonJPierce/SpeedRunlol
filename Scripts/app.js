@@ -1,5 +1,13 @@
-﻿var app = angular.module('speedrunApp', ['kendo.directives']);
-
+﻿var app = angular.module('speedrunApp', ['kendo.directives', 'ui.router']);
+app.config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('main', {
+            url: '/main',
+            templateUrl: 'index.html',
+            controller: 'newFormController'
+        });
+    $urlRouterProvider.otherwise('/main')
+});
 app.service('newFormService', ['$http', function ($http) {
     this.getData = function () {
         return $http.get('/api/NewFormTable');
